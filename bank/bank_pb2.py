@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\nbank.proto\"%\n\x0f\x62\x61lance_request\x12\x12\n\nwallet_key\x18\x01 \x02(\t\"(\n\x0f\x62\x61lance_respose\x12\x15\n\rbalance_value\x18\x01 \x02(\x05\"4\n\x0fpayment_request\x12\x12\n\nwallet_key\x18\x01 \x02(\t\x12\r\n\x05value\x18\x02 \x02(\x05\"5\n\x0fpayment_respose\x12\x0e\n\x06status\x18\x01 \x02(\x05\x12\x12\n\nauth_token\x18\x02 \x01(\x07\"I\n\x10transfer_request\x12\r\n\x05\x63\x61lue\x18\x01 \x02(\x05\x12\x12\n\nauth_token\x18\x02 \x01(\x07\x12\x12\n\nwallet_key\x18\x03 \x02(\t\"\"\n\x10transfer_respose\x12\x0e\n\x06status\x18\x01 \x02(\x05\"\x15\n\x13\x65nd_of_work_request\"%\n\x13\x65nd_of_work_respose\x12\x0e\n\x06status\x18\x01 \x02(\x05\x32\xd1\x01\n\x04\x42\x61nk\x12-\n\x07\x62\x61lance\x12\x10.balance_request\x1a\x10.balance_respose\x12-\n\x07payment\x12\x10.payment_request\x1a\x10.payment_respose\x12\x30\n\x08transfer\x12\x11.transfer_request\x1a\x11.transfer_respose\x12\x39\n\x0b\x65nd_of_work\x12\x14.end_of_work_request\x1a\x14.end_of_work_respose')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\nbank.proto\"%\n\x0f\x62\x61lance_request\x12\x12\n\nwallet_key\x18\x01 \x01(\t\"(\n\x0f\x62\x61lance_respose\x12\x15\n\rbalance_value\x18\x01 \x01(\x05\"4\n\x0fpayment_request\x12\x12\n\nwallet_key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x05\":\n\x0fpayment_respose\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12\x17\n\x0ftransaction_key\x18\x02 \x01(\x0c\"N\n\x10transfer_request\x12\r\n\x05value\x18\x01 \x01(\x05\x12\x17\n\x0ftransaction_key\x18\x02 \x01(\x0c\x12\x12\n\nwallet_key\x18\x03 \x01(\t\"\"\n\x10transfer_respose\x12\x0e\n\x06status\x18\x01 \x01(\x05\"\x15\n\x13\x65nd_of_work_request\"%\n\x13\x65nd_of_work_respose\x12\x0e\n\x06status\x18\x01 \x01(\x05\x32\xd9\x01\n\x04\x42\x61nk\x12/\n\x07\x62\x61lance\x12\x10.balance_request\x1a\x10.balance_respose\"\x00\x12/\n\x07payment\x12\x10.payment_request\x1a\x10.payment_respose\"\x00\x12\x32\n\x08transfer\x12\x11.transfer_request\x1a\x11.transfer_respose\"\x00\x12;\n\x0b\x65nd_of_work\x12\x14.end_of_work_request\x1a\x14.end_of_work_respose\"\x00\x62\x06proto3')
 
 
 
@@ -93,15 +93,15 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _PAYMENT_REQUEST._serialized_start=95
   _PAYMENT_REQUEST._serialized_end=147
   _PAYMENT_RESPOSE._serialized_start=149
-  _PAYMENT_RESPOSE._serialized_end=202
-  _TRANSFER_REQUEST._serialized_start=204
-  _TRANSFER_REQUEST._serialized_end=277
-  _TRANSFER_RESPOSE._serialized_start=279
-  _TRANSFER_RESPOSE._serialized_end=313
-  _END_OF_WORK_REQUEST._serialized_start=315
-  _END_OF_WORK_REQUEST._serialized_end=336
-  _END_OF_WORK_RESPOSE._serialized_start=338
-  _END_OF_WORK_RESPOSE._serialized_end=375
-  _BANK._serialized_start=378
-  _BANK._serialized_end=587
+  _PAYMENT_RESPOSE._serialized_end=207
+  _TRANSFER_REQUEST._serialized_start=209
+  _TRANSFER_REQUEST._serialized_end=287
+  _TRANSFER_RESPOSE._serialized_start=289
+  _TRANSFER_RESPOSE._serialized_end=323
+  _END_OF_WORK_REQUEST._serialized_start=325
+  _END_OF_WORK_REQUEST._serialized_end=346
+  _END_OF_WORK_RESPOSE._serialized_start=348
+  _END_OF_WORK_RESPOSE._serialized_end=385
+  _BANK._serialized_start=388
+  _BANK._serialized_end=605
 # @@protoc_insertion_point(module_scope)

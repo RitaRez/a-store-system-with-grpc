@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+service Store {
+    rpc price (price_request) returns (price_respose) {}
+    rpc sale (payment_request) returns (sale_respose) {}
+    rpc end_of_work (end_of_work_request) returns (end_of_work_respose) {}
+
+}
+
+message price_request {
+}
+
+message price_respose {
+    int32 price_value = 1; 
+}
+
+message sale_request {
+    fixed32 trasaction_key = 1; 
+}
+
+message sale_respose {
+    int32 status = 1; 
+}
+
+message end_of_work_request {
+}
+
+message end_of_work_respose {
+    int32 status = 1; 
+}
