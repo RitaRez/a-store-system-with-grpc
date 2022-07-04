@@ -1,10 +1,10 @@
 syntax = "proto3";
 
 service Bank {
-    rpc balance (balance_request) returns (balance_respose) {}
-    rpc payment (payment_request) returns (payment_respose) {}
-    rpc transfer (transfer_request) returns (transfer_respose) {}
-    rpc end_of_work (end_of_work_request) returns (end_of_work_respose) {}
+    rpc balance (balance_request) returns (balance_response) {}
+    rpc payment (payment_request) returns (payment_response) {}
+    rpc transfer (transfer_request) returns (transfer_response) {}
+    rpc end_of_work (end_of_work_request) returns (end_of_work_response) {}
 
 }
 
@@ -12,7 +12,7 @@ message balance_request {
     string wallet_key = 1;
 }
 
-message balance_respose {
+message balance_response {
     int32 balance_value = 1; 
 }
 
@@ -21,7 +21,7 @@ message payment_request {
     int32 value = 2;
 }
 
-message payment_respose {
+message payment_response {
     int32 status = 1; 
     bytes transaction_key = 2; 
 }
@@ -32,13 +32,13 @@ message transfer_request {
     string wallet_key = 3;
 }
 
-message transfer_respose {
+message transfer_response {
     int32 status = 1; 
 }
 
 message end_of_work_request {
 }
 
-message end_of_work_respose {
+message end_of_work_response {
     int32 status = 1; 
 }

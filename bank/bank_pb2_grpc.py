@@ -17,22 +17,22 @@ class BankStub(object):
         self.balance = channel.unary_unary(
                 '/Bank/balance',
                 request_serializer=bank__pb2.balance_request.SerializeToString,
-                response_deserializer=bank__pb2.balance_respose.FromString,
+                response_deserializer=bank__pb2.balance_response.FromString,
                 )
         self.payment = channel.unary_unary(
                 '/Bank/payment',
                 request_serializer=bank__pb2.payment_request.SerializeToString,
-                response_deserializer=bank__pb2.payment_respose.FromString,
+                response_deserializer=bank__pb2.payment_response.FromString,
                 )
         self.transfer = channel.unary_unary(
                 '/Bank/transfer',
                 request_serializer=bank__pb2.transfer_request.SerializeToString,
-                response_deserializer=bank__pb2.transfer_respose.FromString,
+                response_deserializer=bank__pb2.transfer_response.FromString,
                 )
         self.end_of_work = channel.unary_unary(
                 '/Bank/end_of_work',
                 request_serializer=bank__pb2.end_of_work_request.SerializeToString,
-                response_deserializer=bank__pb2.end_of_work_respose.FromString,
+                response_deserializer=bank__pb2.end_of_work_response.FromString,
                 )
 
 
@@ -69,22 +69,22 @@ def add_BankServicer_to_server(servicer, server):
             'balance': grpc.unary_unary_rpc_method_handler(
                     servicer.balance,
                     request_deserializer=bank__pb2.balance_request.FromString,
-                    response_serializer=bank__pb2.balance_respose.SerializeToString,
+                    response_serializer=bank__pb2.balance_response.SerializeToString,
             ),
             'payment': grpc.unary_unary_rpc_method_handler(
                     servicer.payment,
                     request_deserializer=bank__pb2.payment_request.FromString,
-                    response_serializer=bank__pb2.payment_respose.SerializeToString,
+                    response_serializer=bank__pb2.payment_response.SerializeToString,
             ),
             'transfer': grpc.unary_unary_rpc_method_handler(
                     servicer.transfer,
                     request_deserializer=bank__pb2.transfer_request.FromString,
-                    response_serializer=bank__pb2.transfer_respose.SerializeToString,
+                    response_serializer=bank__pb2.transfer_response.SerializeToString,
             ),
             'end_of_work': grpc.unary_unary_rpc_method_handler(
                     servicer.end_of_work,
                     request_deserializer=bank__pb2.end_of_work_request.FromString,
-                    response_serializer=bank__pb2.end_of_work_respose.SerializeToString,
+                    response_serializer=bank__pb2.end_of_work_response.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -109,7 +109,7 @@ class Bank(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/Bank/balance',
             bank__pb2.balance_request.SerializeToString,
-            bank__pb2.balance_respose.FromString,
+            bank__pb2.balance_response.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -126,7 +126,7 @@ class Bank(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/Bank/payment',
             bank__pb2.payment_request.SerializeToString,
-            bank__pb2.payment_respose.FromString,
+            bank__pb2.payment_response.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -143,7 +143,7 @@ class Bank(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/Bank/transfer',
             bank__pb2.transfer_request.SerializeToString,
-            bank__pb2.transfer_respose.FromString,
+            bank__pb2.transfer_response.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -160,6 +160,6 @@ class Bank(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/Bank/end_of_work',
             bank__pb2.end_of_work_request.SerializeToString,
-            bank__pb2.end_of_work_respose.FromString,
+            bank__pb2.end_of_work_response.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

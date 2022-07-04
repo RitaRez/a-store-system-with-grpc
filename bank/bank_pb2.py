@@ -14,18 +14,18 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\nbank.proto\"%\n\x0f\x62\x61lance_request\x12\x12\n\nwallet_key\x18\x01 \x01(\t\"(\n\x0f\x62\x61lance_respose\x12\x15\n\rbalance_value\x18\x01 \x01(\x05\"4\n\x0fpayment_request\x12\x12\n\nwallet_key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x05\":\n\x0fpayment_respose\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12\x17\n\x0ftransaction_key\x18\x02 \x01(\x0c\"N\n\x10transfer_request\x12\r\n\x05value\x18\x01 \x01(\x05\x12\x17\n\x0ftransaction_key\x18\x02 \x01(\x0c\x12\x12\n\nwallet_key\x18\x03 \x01(\t\"\"\n\x10transfer_respose\x12\x0e\n\x06status\x18\x01 \x01(\x05\"\x15\n\x13\x65nd_of_work_request\"%\n\x13\x65nd_of_work_respose\x12\x0e\n\x06status\x18\x01 \x01(\x05\x32\xd9\x01\n\x04\x42\x61nk\x12/\n\x07\x62\x61lance\x12\x10.balance_request\x1a\x10.balance_respose\"\x00\x12/\n\x07payment\x12\x10.payment_request\x1a\x10.payment_respose\"\x00\x12\x32\n\x08transfer\x12\x11.transfer_request\x1a\x11.transfer_respose\"\x00\x12;\n\x0b\x65nd_of_work\x12\x14.end_of_work_request\x1a\x14.end_of_work_respose\"\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\nbank.proto\"%\n\x0f\x62\x61lance_request\x12\x12\n\nwallet_key\x18\x01 \x01(\t\")\n\x10\x62\x61lance_response\x12\x15\n\rbalance_value\x18\x01 \x01(\x05\"4\n\x0fpayment_request\x12\x12\n\nwallet_key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x05\";\n\x10payment_response\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12\x17\n\x0ftransaction_key\x18\x02 \x01(\x0c\"N\n\x10transfer_request\x12\r\n\x05value\x18\x01 \x01(\x05\x12\x17\n\x0ftransaction_key\x18\x02 \x01(\x0c\x12\x12\n\nwallet_key\x18\x03 \x01(\t\"#\n\x11transfer_response\x12\x0e\n\x06status\x18\x01 \x01(\x05\"\x15\n\x13\x65nd_of_work_request\"&\n\x14\x65nd_of_work_response\x12\x0e\n\x06status\x18\x01 \x01(\x05\x32\xdd\x01\n\x04\x42\x61nk\x12\x30\n\x07\x62\x61lance\x12\x10.balance_request\x1a\x11.balance_response\"\x00\x12\x30\n\x07payment\x12\x10.payment_request\x1a\x11.payment_response\"\x00\x12\x33\n\x08transfer\x12\x11.transfer_request\x1a\x12.transfer_response\"\x00\x12<\n\x0b\x65nd_of_work\x12\x14.end_of_work_request\x1a\x15.end_of_work_response\"\x00\x62\x06proto3')
 
 
 
 _BALANCE_REQUEST = DESCRIPTOR.message_types_by_name['balance_request']
-_BALANCE_RESPOSE = DESCRIPTOR.message_types_by_name['balance_respose']
+_BALANCE_RESPONSE = DESCRIPTOR.message_types_by_name['balance_response']
 _PAYMENT_REQUEST = DESCRIPTOR.message_types_by_name['payment_request']
-_PAYMENT_RESPOSE = DESCRIPTOR.message_types_by_name['payment_respose']
+_PAYMENT_RESPONSE = DESCRIPTOR.message_types_by_name['payment_response']
 _TRANSFER_REQUEST = DESCRIPTOR.message_types_by_name['transfer_request']
-_TRANSFER_RESPOSE = DESCRIPTOR.message_types_by_name['transfer_respose']
+_TRANSFER_RESPONSE = DESCRIPTOR.message_types_by_name['transfer_response']
 _END_OF_WORK_REQUEST = DESCRIPTOR.message_types_by_name['end_of_work_request']
-_END_OF_WORK_RESPOSE = DESCRIPTOR.message_types_by_name['end_of_work_respose']
+_END_OF_WORK_RESPONSE = DESCRIPTOR.message_types_by_name['end_of_work_response']
 balance_request = _reflection.GeneratedProtocolMessageType('balance_request', (_message.Message,), {
   'DESCRIPTOR' : _BALANCE_REQUEST,
   '__module__' : 'bank_pb2'
@@ -33,12 +33,12 @@ balance_request = _reflection.GeneratedProtocolMessageType('balance_request', (_
   })
 _sym_db.RegisterMessage(balance_request)
 
-balance_respose = _reflection.GeneratedProtocolMessageType('balance_respose', (_message.Message,), {
-  'DESCRIPTOR' : _BALANCE_RESPOSE,
+balance_response = _reflection.GeneratedProtocolMessageType('balance_response', (_message.Message,), {
+  'DESCRIPTOR' : _BALANCE_RESPONSE,
   '__module__' : 'bank_pb2'
-  # @@protoc_insertion_point(class_scope:balance_respose)
+  # @@protoc_insertion_point(class_scope:balance_response)
   })
-_sym_db.RegisterMessage(balance_respose)
+_sym_db.RegisterMessage(balance_response)
 
 payment_request = _reflection.GeneratedProtocolMessageType('payment_request', (_message.Message,), {
   'DESCRIPTOR' : _PAYMENT_REQUEST,
@@ -47,12 +47,12 @@ payment_request = _reflection.GeneratedProtocolMessageType('payment_request', (_
   })
 _sym_db.RegisterMessage(payment_request)
 
-payment_respose = _reflection.GeneratedProtocolMessageType('payment_respose', (_message.Message,), {
-  'DESCRIPTOR' : _PAYMENT_RESPOSE,
+payment_response = _reflection.GeneratedProtocolMessageType('payment_response', (_message.Message,), {
+  'DESCRIPTOR' : _PAYMENT_RESPONSE,
   '__module__' : 'bank_pb2'
-  # @@protoc_insertion_point(class_scope:payment_respose)
+  # @@protoc_insertion_point(class_scope:payment_response)
   })
-_sym_db.RegisterMessage(payment_respose)
+_sym_db.RegisterMessage(payment_response)
 
 transfer_request = _reflection.GeneratedProtocolMessageType('transfer_request', (_message.Message,), {
   'DESCRIPTOR' : _TRANSFER_REQUEST,
@@ -61,12 +61,12 @@ transfer_request = _reflection.GeneratedProtocolMessageType('transfer_request', 
   })
 _sym_db.RegisterMessage(transfer_request)
 
-transfer_respose = _reflection.GeneratedProtocolMessageType('transfer_respose', (_message.Message,), {
-  'DESCRIPTOR' : _TRANSFER_RESPOSE,
+transfer_response = _reflection.GeneratedProtocolMessageType('transfer_response', (_message.Message,), {
+  'DESCRIPTOR' : _TRANSFER_RESPONSE,
   '__module__' : 'bank_pb2'
-  # @@protoc_insertion_point(class_scope:transfer_respose)
+  # @@protoc_insertion_point(class_scope:transfer_response)
   })
-_sym_db.RegisterMessage(transfer_respose)
+_sym_db.RegisterMessage(transfer_response)
 
 end_of_work_request = _reflection.GeneratedProtocolMessageType('end_of_work_request', (_message.Message,), {
   'DESCRIPTOR' : _END_OF_WORK_REQUEST,
@@ -75,12 +75,12 @@ end_of_work_request = _reflection.GeneratedProtocolMessageType('end_of_work_requ
   })
 _sym_db.RegisterMessage(end_of_work_request)
 
-end_of_work_respose = _reflection.GeneratedProtocolMessageType('end_of_work_respose', (_message.Message,), {
-  'DESCRIPTOR' : _END_OF_WORK_RESPOSE,
+end_of_work_response = _reflection.GeneratedProtocolMessageType('end_of_work_response', (_message.Message,), {
+  'DESCRIPTOR' : _END_OF_WORK_RESPONSE,
   '__module__' : 'bank_pb2'
-  # @@protoc_insertion_point(class_scope:end_of_work_respose)
+  # @@protoc_insertion_point(class_scope:end_of_work_response)
   })
-_sym_db.RegisterMessage(end_of_work_respose)
+_sym_db.RegisterMessage(end_of_work_response)
 
 _BANK = DESCRIPTOR.services_by_name['Bank']
 if _descriptor._USE_C_DESCRIPTORS == False:
@@ -88,20 +88,20 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   DESCRIPTOR._options = None
   _BALANCE_REQUEST._serialized_start=14
   _BALANCE_REQUEST._serialized_end=51
-  _BALANCE_RESPOSE._serialized_start=53
-  _BALANCE_RESPOSE._serialized_end=93
-  _PAYMENT_REQUEST._serialized_start=95
-  _PAYMENT_REQUEST._serialized_end=147
-  _PAYMENT_RESPOSE._serialized_start=149
-  _PAYMENT_RESPOSE._serialized_end=207
-  _TRANSFER_REQUEST._serialized_start=209
-  _TRANSFER_REQUEST._serialized_end=287
-  _TRANSFER_RESPOSE._serialized_start=289
-  _TRANSFER_RESPOSE._serialized_end=323
-  _END_OF_WORK_REQUEST._serialized_start=325
-  _END_OF_WORK_REQUEST._serialized_end=346
-  _END_OF_WORK_RESPOSE._serialized_start=348
-  _END_OF_WORK_RESPOSE._serialized_end=385
-  _BANK._serialized_start=388
-  _BANK._serialized_end=605
+  _BALANCE_RESPONSE._serialized_start=53
+  _BALANCE_RESPONSE._serialized_end=94
+  _PAYMENT_REQUEST._serialized_start=96
+  _PAYMENT_REQUEST._serialized_end=148
+  _PAYMENT_RESPONSE._serialized_start=150
+  _PAYMENT_RESPONSE._serialized_end=209
+  _TRANSFER_REQUEST._serialized_start=211
+  _TRANSFER_REQUEST._serialized_end=289
+  _TRANSFER_RESPONSE._serialized_start=291
+  _TRANSFER_RESPONSE._serialized_end=326
+  _END_OF_WORK_REQUEST._serialized_start=328
+  _END_OF_WORK_REQUEST._serialized_end=349
+  _END_OF_WORK_RESPONSE._serialized_start=351
+  _END_OF_WORK_RESPONSE._serialized_end=389
+  _BANK._serialized_start=392
+  _BANK._serialized_end=613
 # @@protoc_insertion_point(module_scope)

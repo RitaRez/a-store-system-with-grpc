@@ -40,7 +40,7 @@ class BankServer (BankServicer):
         except FileNotFoundError:   
             print("Wrong file or filepath")
 
-    def balance(self, request: balance_request, context) -> balance_respose:
+    def balance(self, request: balance_request, context) -> balance_response:
         wallet_key = request.wallet_key
 
         if wallet_key in self.clients:
@@ -48,9 +48,9 @@ class BankServer (BankServicer):
         else:
             balance = -1
         
-        return balance_respose(balance_value = balance)
+        return balance_response(balance_value = balance)
 
-    def payment(self, request: payment_request, context) -> payment_respose:
+    def payment(self, request: payment_request, context) -> payment_response:
         
         wallet_key = request.wallet_key
         value = request.value
@@ -67,9 +67,9 @@ class BankServer (BankServicer):
             self.clients[wallet_key] -= value
             self.transactions[transaction_key] = value
 
-        return payment_respose(status = status, transaction_key = transaction_key)
+        return payment_response(status = status, transaction_key = transaction_key)
 
-    def transfer(self, request: transfer_request, context) -> transfer_respose:
+    def transfer(self, request: transfer_request, context) -> transfer_response:
 
         value = request.value
         transaction_key = request.transaction_key
@@ -89,15 +89,15 @@ class BankServer (BankServicer):
             self.clients[wallet_key] += value
             status = self.clients[wallet_key]
 
-        return transfer_respose(status = status)
+        return transfer_response(status = status)
 
-    def end_of_work(self, request: end_of_work_request, context) -> end_of_work_respose:
+    def end_of_work(self, request: end_of_work_request, context) -> end_of_work_response:
 
         self.save_changes()
         status = len(self.clients)
 
         self._stop_event.set()
-        return end_of_work_respose(status = status)
+        return end_of_work_response(status = status)
 
 
 def serve():
@@ -111,7 +111,7 @@ def serve():
     
     server.start()
     stop_event.wait()
-    server.stop()
+    server.stop(None)
 
 if __name__ == '__main__':
     serve()
